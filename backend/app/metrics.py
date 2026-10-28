@@ -23,8 +23,15 @@ def build_comparison(selected, hourly_actuals):
 def summarise(comparison):
     """Headline accuracy numbers, all in MW"""
     if comparison.empty:
-        return {"n_hours": 0, "mae": None, "rmse": None, "bias": None, "p95_abs_error": None}
-
+        return {
+            "n_hours": 0,
+            "mae": None,
+            "rmse": None,
+            "bias": None,
+            "p95_abs_error": None,
+            "p95_signed_error": None,
+        }
+    
     error = comparison["error"]
     return {
         "n_hours": int(len(error)),
@@ -32,4 +39,5 @@ def summarise(comparison):
         "rmse": float((error**2).mean()**0.5),
         "bias": float(error.mean()),
         "p95_abs_error": float(error.abs().quantile(0.95)),
+        "p95_signed_error": float(error.quantile(0.95)),
     }
