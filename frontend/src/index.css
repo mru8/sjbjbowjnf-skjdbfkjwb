@@ -11,3 +11,11 @@ body {
 .tabs a.active { color: #000; border-bottom: 2px solid #0a6; font-weight: 600;}
 
 .controls { display: flex; gap: 24px; align-items: center; flex-wrap: wrap; margin-bottom: 12px;}
+
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; margin: 16px 0 24px; }
+.card { border: 1px solid #ddd; border-radius: 8px; padding: 12px; }
+.card.headline { border-color: #0a6; border-width: 2px; }
+.card-label { font-size: 0.8rem; color: #555; }
+.card-value { font-size: 1.5rem; font-weight: 600; margin: 4px 0; }
+.card-note { font-size: 0.85rem; color: #555; }
+.hint { font-size: 0.85rem; color: #555; }
