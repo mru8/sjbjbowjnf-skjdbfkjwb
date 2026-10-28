@@ -8,7 +8,7 @@ export async function getForecast(day, cutoff) {
 }
 
 export async function getAccuracy(start, end, cutoff) {
-    const url = `${API_URL}/accuracy?start=${start}&end=${end}&cutoff=${encodeURIComponend(cutoff)}`
+    const url = `${API_URL}/accuracy?start=${start}&end=${end}&cutoff=${encodeURIComponent(cutoff)}`
     const res = await fetch(url)
     if (!res.ok) throw new Error(`API error ${res.status}`)
     return res.json()
