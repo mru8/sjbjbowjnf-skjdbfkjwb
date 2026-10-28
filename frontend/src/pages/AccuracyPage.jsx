@@ -59,10 +59,20 @@ export default function AccuracyPage() {
 
             <div className="cards">
                 <div className="card headline">
+                    <div className="card-label">P95 over-forecast</div>
+                    <div className="card-value">
+                        {s.p95_signed_error > 0 ? '+' : ''}
+                        {mw(s.p95_signed_error)}
+                    </div>
+                    <div className="card-note">
+                        In 95% of hours, forecast minus actual was at most this much.
+                    </div>
+                </div>
+                <div className="card">
                     <div className="card-label">P95 absolute error</div>
                     <div className="card-value">{mw(s.p95_abs_error)}</div>
-                    <div className="cart-note">
-                        In 95% of hours the forecast was within this many MW of the actual.
+                    <div className="card-note">
+                        In 95% of hours the forecast was within this many MW of the actual, in either direction.
                     </div>
                 </div>
                 <div className="card">
