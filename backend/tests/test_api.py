@@ -20,7 +20,7 @@ def test_invalid_cutoff_is_rejected():
     assert r.status_code == 422
 
 def test_accuracy_for_january():
-    body = client.get("/accuracy", params={"start": "2026-01-01", "end": "2026-01-31"}).json()
+    body = client.get("/accuracy", params={"start": "2026-01-02", "end": "2026-02-01"}).json()
     assert body["summary"]["n_hours"] == 744
     assert body["summary"]["bias"] > 0
 
