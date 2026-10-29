@@ -12,8 +12,8 @@ import {
 import { useCutoff } from '../CutoffContext.jsx'
 import { getAccuracy } from "../api.js";
 
-const START = '2026-01-01'
-const END = '2026-01-31'
+const START = '2026-01-02'
+const END = '2026-02-01'
 
 function mw(value) {
     return Math.round(value).toLocaleString('en-GB') + ' MW'

@@ -59,8 +59,8 @@ export default function ForecastPage() {
           <input
             type="date"
             value={day}
-            min="2026-01-01"
-            max="2026-01-31"
+            min="2026-01-02"
+            max="2026-02-01"
             onChange={(e) => setDay(e.target.value)}
           />
         </label>

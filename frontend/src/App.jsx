@@ -9,7 +9,7 @@ export default function App() {
   return (
     <div className="app">
       <header className="header">
-        <h1>Wind forecast, January 2026</h1>
+        <h1>Wind forecast: Purchase decisions made in January 2026</h1>
         <label>
           Decision cutoff (D-1, UK time){' '}
           <select value={cutoff} onChange={(e) => setCutoff(e.target.value)}>
